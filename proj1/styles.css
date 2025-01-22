@@ -23,4 +23,7 @@ p{
 #hg{
     color: brown;
     background-color: goldenrod;
+    align-self: center;
+    align-items: center;
+    text-align: center;
 }
