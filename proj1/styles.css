@@ -1,8 +1,14 @@
+body{
+  
+   
+    text-align: center;
+}
 
-
-#hg{
+#hg p{
     color: brown;
-    background-color: goldenrod;
+    background-color: skyblue;
    
     
 }
+
+
