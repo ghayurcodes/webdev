@@ -9,59 +9,49 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Courier New', Courier, monospace;
+    }
 
-    .main{
+    .main {
       background-color: goldenrod;
       width: 100vw;
       height: 100vh;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+      grid-template-rows: repeat(2, 1fr); /* 2 rows of equal height */
+      gap: 10px; /* Spacing between the blocks */
+      justify-items: center; /* Center blocks horizontally */
+      align-items: center; /* Center blocks vertically */
     }
 
-
-    .sub{
-      background-color: purple;
+    .sub {
+      background-color: rgb(209, 94, 209);
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       height: 20vh;
-      width: 200vw;
-      margin: 5px;
+      width: 22vw;
+      font-size: 30px;
+      font-weight: 800;
+      box-shadow: 5px 5px 15px 1px green;
     }
   </style>
-
-
-
 </head>
 
 <body>
   <div class="main">
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    <div class="sub">
-      child
-    </div>
-    
-
+    <div class="sub">Child 1</div>
+    <div class="sub">Child 2</div>
+    <div class="sub">Child 3</div>
+    <div class="sub">Child 4</div>
+    <div class="sub">Child 5</div>
+    <div class="sub">Child 6</div>
+    <div class="sub">Child 7</div>
+    <div class="sub">Child 8</div>
   </div>
 </body>
 
