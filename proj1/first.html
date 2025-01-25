@@ -16,46 +16,42 @@
       font-family: 'Courier New', Courier, monospace;
     }
 
-    .main {
-      background-color: goldenrod;
-      width: 100vw;
-      height: 100vh;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
-      grid-template-rows: repeat(2, 1fr); /* 2 rows of equal height */
-      gap: 10px; /* Spacing between the blocks */
-      justify-items: center; /* Center blocks horizontally */
-      align-items: center; /* Center blocks vertically */
-    }
+   
 
     .sub {
       background-color: rgb(209, 94, 209);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 22vh;
-      width: 22vw;
-      font-size: 30px;
-      font-weight: 800;
-      box-shadow: 5px 5px 15px 1px green;
-      overflow-x: hidden;
-      overflow-y: scroll;
+      color: aquamarine;
+      border: 2px solid black;
+      height: 133px;
+      width: 80vw;
+      padding: 5px;
+      margin: 10px;
+  
+    }
+
+
+
+    .box1{
+      background-color: aquamarine;
+    }
+    .box2{
+        background-color: blueviolet;
+        top: 30px;
+        position: relative;
+    }
+    .box3{
+      background-color: burlywood;
     }
   </style>
 </head>
 
 <body>
-  <div class="main">
-    <div class="sub">Child 1 
-      Lorem ipsum dolor sit amet consectetur adipisicilong elit. Molestias explicabo quod ratione ipsa sint iusto excepturi in, doloribus quidem, recusandae voluptas ullam, iure nemo sunt optio quisquam ad odio minus aut totam accusamus pariatur aperiam.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, similique. Quasi iste sequi facere autem, nulla molestiae dolore. Pariatur dolore iste distinctio ex quae natus quas quam impedit placeat rem, laudantium nemo aspernatur? Non.Doloremque eaque corrupti dolor nesciunt sequi sint harum illum aliquid!   lorem566</div>
-    <div class="sub">Child 2   Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum fugit magni voluptas obcaecati rerum saepe incidunt ut accusamus, culpa dolorem, qui facilis!</div>
-    <div class="sub">Child 3</div>
-    <div class="sub">Child 4</div>
-    <div class="sub">Child 5</div>
-    <div class="sub">Child 6</div>
-    <div class="sub">Child 7</div>
-    <div class="sub">Child 8</div>
-  </div>
+  
+    <div class="sub box1">Child 1</div>
+    <div class="sub box2">Child 2</div>
+    <div class="sub box3">Child 3</div>
+    
+  
 </body>
 
 </html>
