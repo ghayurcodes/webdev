@@ -14,44 +14,55 @@
 
     body {
       font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-   
-
-    .sub {
-      background-color: rgb(209, 94, 209);
-      color: aquamarine;
-      border: 2px solid black;
-      height: 133px;
-      width: 80vw;
+    .cont {
+      width: 25vw;
+      height: 75vh;
+    
       padding: 5px;
-      margin: 10px;
-  
+      background-color: white;
+      border-radius: 20px;
+      margin-top: 10vh;
+      border: 2px solid grey;
     }
 
 
+    img{
+      width: 24vw;
+      height: 30vh;
+      border-radius: 20px;
+    }
 
-    .box1{
-      background-color: aquamarine;
-    }
-    .box2{
-        background-color: blueviolet;
-        top: 30px;
-        position: relative;
-    }
-    .box3{
-      background-color: burlywood;
+
+    .tok{
+      list-style: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 700;
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 2px;
+      text-align: center;
+      margin-top: 20px;
+      
+
     }
   </style>
 </head>
 
 <body>
-  
-    <div class="sub box1">Child 1</div>
-    <div class="sub box2">Child 2</div>
-    <div class="sub box3">Child 3</div>
+
+
+  <div class="cont">
+    <img src="https://static.vecteezy.com/system/resources/previews/043/032/458/non_2x/a-picturesque-mountain-landscape-with-towering-pine-trees-lining-the-rugged-slopes-photo.jpg" alt="mountains"  width="250 "  height="150">
+    <span class="tok">Nature</span>
+    <span class="tok">Lake</span>
     
-  
+  </div>
+
 </body>
 
 </html>
