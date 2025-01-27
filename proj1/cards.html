@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(120deg, #d4fc79, #96e6a1);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .cont {
+      width: 21vw;
+      height: auto;
+      padding: 15px;
+      background-color: white;
+      border-radius: 20px;
+      margin: 20px;
+      border: 2px solid grey;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cont:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100%;
+      height: 30vh;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .tokcon {
+      margin: 10px 0px;
+    }
+
+    .tok {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      border: 1px solid grey;
+      color: gray;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+
+    h2 {
+      color: darkblue;
+      margin: 10px 0;
+    }
+
+    p {
+      padding: 10px;
+      border-radius: 10px;
+      color: grey;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    .btn {
+      background-color: #6c63ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 18px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 0.9em;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4b47b4;
+    }
+
+    /* Responsive Design */
+    @media only screen and (max-width: 768px) {
+      .cont {
+        width: 90%;
+      }
+
+      img {
+        height: auto;
+      }
+    }
+
+    @media only screen and (max-width: 455px) {
+      body {
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cont {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cont">
+    <img src="https://static.vecteezy.com/system/resources/previews/043/032/458/non_2x/a-picturesque-mountain-landscape-with-towering-pine-trees-lining-the-rugged-slopes-photo.jpg" alt="mountains">
+    <div class="tokcon">
+      <span class="tok">Nature</span>
+      <span class="tok">Lake</span>
+    </div>
+    <h2>Travel Abroad!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet laudantium est hic animi expedita fugit excepturi vero quod optio assumenda earum vitae itaque temporibus soluta officia recusandae doloremque inventore.</p>
+    <a href="#" class="btn">Read More</a>
+  </div>
+
+  <div class="cont">
+    <img src="https://static.vecteezy.com/system/resources/previews/043/032/458/non_2x/a-picturesque-mountain-landscape-with-towering-pine-trees-lining-the-rugged-slopes-photo.jpg" alt="mountains">
+    <div class="tokcon">
+      <span class="tok">Adventure</span>
+      <span class="tok">Mountains</span>
+    </div>
+    <h2>Explore the Wilderness!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet laudantium est hic animi expedita fugit excepturi vero quod optio assumenda earum vitae itaque temporibus soluta officia recusandae doloremque inventore.</p>
+    <a href="#" class="btn">Read More</a>
+  </div>
+
+  <div class="cont">
+    <img src="https://static.vecteezy.com/system/resources/previews/043/032/458/non_2x/a-picturesque-mountain-landscape-with-towering-pine-trees-lining-the-rugged-slopes-photo.jpg" alt="mountains">
+    <div class="tokcon">
+      <span class="tok">Relax</span>
+      <span class="tok">Vacation</span>
+    </div>
+    <h2>Unwind in Paradise!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet laudantium est hic animi expedita fugit excepturi vero quod optio assumenda earum vitae itaque temporibus soluta officia recusandae doloremque inventore.</p>
+    <a href="#" class="btn">Read More</a>
+  </div>
+
+</body>
+
+</html>
