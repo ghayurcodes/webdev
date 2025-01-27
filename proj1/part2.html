@@ -4,26 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-      
-      .nav{
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .nav {
+            background-color: white;
+            height: 15vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        ul {
+            list-style: none; /* Remove default bullets */
+            display: flex; /* Align list items horizontally */
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: relative; /* Required for pseudo-element positioning */
+            color: rgb(42, 40, 40);
+            margin: 0 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
         
-      }
+        .box {
+            display: flex;
+            align-items: center;
+        }
 
+        .box img {
+            margin-left: 20px;
+            height: 40px;
+        }
 
-</style>
-
+        main {
+            background-color: rgb(164, 164, 234);
+            width: 100%;
+            height: 70vh;
+        }
+    </style>
 </head>
 <body>
     <nav class="nav">
-
+        <img class="logo" src="Screenshot 2025-01-27 202108.png" alt="Logo">
+        <div class="box">
+            <ul>
+                <li class="item">Products</li>
+                <li class="item">For Business</li>
+                <li class="item">Resources</li>
+                <li class="item">Support</li>
+                <li class="item">Our Company</li>
+            </ul>
+            <img src="Screenshot 2025-01-27 203451.png" alt="Cart">
+        </div>
     </nav>
-   
-      
-       
-
-
-
+    <main></main>
 </body>
 </html>
