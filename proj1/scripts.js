@@ -9,31 +9,31 @@ let r = Math.random() * 10
 
 
 
-if(r<10){
-    switch (opt) {
-        case "1":
-            alert("ans is"+a / b)
-            break;
+// if(r<10){
+//     switch (opt) {
+//         case "1":
+//             alert("ans is"+a / b)
+//             break;
     
-        case "2":
-            alert("ans is"+a ** b)
-            break;
+//         case "2":
+//             alert("ans is"+a ** b)
+//             break;
     
-        case "3":
-            alert("ans is"+(a + b))
-            break;
+//         case "3":
+//             alert("ans is"+(a + b))
+//             break;
 
     
-        case "4":
-            alert("ans is"+a - b)
-            break;
-        default:
-            alert("wrong ans lol")
-            break;
-    }
-}
+//         case "4":
+//             alert("ans is"+a - b)
+//             break;
+//         default:
+//             alert("wrong ans lol")
+//             break;
+//     }
+// }
 
-else{
+// else{
     switch (opt) {
         case "1":
             alert(a + b)
@@ -54,6 +54,6 @@ else{
             alert("corrected calculate sanser")
             break;
     }
-}
+// }
 
 
