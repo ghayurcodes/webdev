@@ -2,14 +2,26 @@
 
 
 
-var nme="ghayur"
 
-console.log(`my nam eis ${nme}`)
+var a={
+    1:"sparky",
+    2:"cool",
+    3:"funky"
+}
 
-console.log(nme.replace("a",'d'))
+var b={
+    1:"shoes",
+    2:"clothes",
+    3:"cars"
+}
 
-let a=9;
-let b=8;
+var c={
+    1:"limited",
+    2:"copyeright",
+    3:"group"
+}
 
-console.log(`answer is: ${eval(`${a}+${b}`)}`)
-console.log(a+'+'+b)
+
+var r=Math.random
+
+while(r>10)
