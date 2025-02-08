@@ -1,25 +1,9 @@
-var a = {
-    1: "sparky",
-    2: "cool",
-    3: "funky"
-};
+function fac(num) {
+    if (num === 0 || num === 1) {
+        return 1;  // Base case: factorial of 0 or 1 is 1
+    }
+    return num * fac(num - 1);  // Recursive call
+}
 
-var b = {
-    1: "shoes",
-    2: "clothes",
-    3: "cars"
-};
-
-var c = {
-    1: "limited",
-    2: "copyeright",
-    3: "group"
-};
-
-// Generate a random number between 1 and 3
-var r = Math.floor(Math.random() * 3)+1;
-
-// Construct the name
-var output = a[r] + " " + b[r] + " " + c[r];
-
-console.log(output);
+var num = 5;
+console.log(fac(num)); // Output: 120
