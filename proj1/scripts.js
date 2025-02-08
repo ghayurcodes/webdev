@@ -17,7 +17,7 @@ var c = {
 };
 
 // Generate a random number between 1 and 3
-var r = Math.floor(Math.random() * 4);
+var r = Math.floor(Math.random() * 3)+1;
 
 // Construct the name
 var output = a[r] + " " + b[r] + " " + c[r];
