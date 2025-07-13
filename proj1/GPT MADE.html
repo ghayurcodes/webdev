@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="pi">
+    <input type="text" id="first" placeholder="first name">
+    <input type="text" id="last" placeholder="lastname name">
+    <div class="pi">
+        <button type="submit" onclick="add(); name();">good to go</button>
+        <p id="result"></p>
+    </div>
+</div>
+
+<div>
+    <p id="ta">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolore unde earum commodi quam itaque hic.
+        Soluta, velit placeat odio dolores sed, obcaecati ea suscipit, cupiditate veritatis quia ipsa Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Cupiditate numquam incidunt optio nisi temporibus labore, corporis nam 
+        quibusdam placeat ex, nemo rem odio amet inventore minus modi velit, reprehenderit vitae?
+    </p>
+    <img id="ff" src="C:\Users\lifez\Downloads\pngwing.com.png" alt="example-image">
+</div>
+
+<div class="pic">
+    <img src="https://images.unsplash.com/photo-1610088441520-4352457e7095?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1lbnxlbnwwfHwwfHx8MA%3D%3D" alt="example-image" />
+    <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="example-image" />
+    <img src="https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVufGVufDB8fDB8fHww" alt="example-image" />
+</div>
+
+<footer>blah blah | uifv | <a href="#"><img src="C:\Users\lifez\Downloads\icons8-facebook-48.png"/></a></footer>
+
+<script>
+    function add() {
+        alert("boom");
+    }
+
+    function name() {
+        var firstName = document.getElementById("first").value;
+        var lastName = document.getElementById("last").value;
+        document.getElementById("result").innerHTML = "Name: " + firstName + " " + lastName;
+    }
+</script>
+</body>
+</html>
