@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model Layout</title>
     <style>
-        
+        :root {
+            --bgcol: rgb(145, 28, 228);
+        }
+
         * {
             margin: 0;
             padding: 0;
-            
+
         }
 
-      
+
         .heading {
             font-size: 30px;
             font-weight: bold;
@@ -27,51 +31,42 @@
         .box {
             height: 90vh;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
+            gap: 20px;
             background-color: aqua;
             border: 2px solid red;
+
         }
 
-        .box1, .box2 {
+        .boxex {
             flex: 1;
-            width: 100%;
-            height: 60VH;
-            margin: 0 20px;
+            height: 20%;
+            background-color: var(--bgcol);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
         }
-
-        .box1 {
-            background-color: yellow;
-            border: 3px solid blue;
-        }
-
-        .box2 {
-            
-            background-color: pink;
-            border: 3px solid green;
-            overflow: auto;
-            
-            overflow-wrap: break-word;
-
-
-
-           
-        }
-
-
     </style>
 </head>
+
 <body>
 
     <div class="heading">Box model</div>
 
     <div class="box">
-        <div class="box1"></div>
-        <div style="flex: 1;"></div>
-        <div class="box2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, aspernatur, voluptates dolorum dicta ratione perferendis impedit officia sed ex consequatur minus minima, magni quas maxime ad repudiandae modi mollitia ut reprehenderit eligendi. Libero provident, ex neque nam modi asperiores fuga! Iste beatae impedit corporis molestiae magnam repellat, explicabo eos, in error asperiores alias, blanditiis sequi quisquam dicta magni architecto ea. Earum minus, tempora illum libero architecto doloremque cum, hic porro blanditiis id nemo amet perferendis quibusdam eaque numquam. Cum repudiandae ab mollitia corrupti expedita corporis et eaque perspiciatis quo veritatis minima enim, nulla maxime veniam dicta iste facilis dignissimos sint numquam voluptatibus excepturi rem! Minus quae rerum id aut, quo dolorem labore suscipit magnam beatae voluptate est mollitia reiciendis cumque temporibus placeat! Officiis sunt esse hic ducimus optio voluptatum, nostrum numquam distinctio placeat, quaerat quod fugit consequuntur, iure praesentium. Repellendus expedita deleniti laboriosam harum, non quae quaerat doloremque illum, voluptatem cumque eius nobis assumenda sed ut vitae? Consequatur optio quae provident molestias fugiat illum aliquid aspernatur atque, distinctio minima architecto voluptas praesentium iste, iusto blanditiis maiores placeat ab repellat itaque officia nam repellendus harum? Sed, quisquam eum quis nisi aspernatur obcaecati tempore consectetur perferendis assumenda ex dolor. Esse aliquam impedit a adipisci quo! Dignissimos asperiores enim dolorem libero. Sunt, animi. Laudantium, dolorem! Unde, incidunt! Quisquam vero, veritatis aspernatur reiciendis sit commodi vitae corporis in. Porro, laborum. Cum deserunt doloremque omnis animi, dolore recusandae. Aliquam reiciendis blanditiis quos ducimus porro accusamus, cum quibusdam ipsum atque voluptate laboriosam dolores dicta tempore libero vero eius aspernatur, soluta enim reprehenderit animi voluptas. Quidem non eligendi rerum odio voluptatum? Molestiae illum ut eligendi, officia fuga numquam doloremque ipsa eaque minima libero quas placeat, illo id exercitationem eum iste assumenda nostrum sint aliquid? Eum maiores reiciendis, beatae laborum labore eius excepturi quisquam natus tempora aspernatur explicabo, tenetur eos ut architecto alias nesciunt assumenda repellendus consectetur illum. Repellat ipsam, perferendis expedita corrupti fuga soluta eligendi deserunt magni recusandae a impedit dolorem. Quo repudiandae doloremque dolorum obcaecati explicabo? Consequuntur, voluptatem enim aut laudantium magni recusandae saepe dolores laboriosam quaerat similique fugit illum dolorem commodi odio architecto fuga nobis repudiandae culpa sed qui quia mollitia possimus rem quidem! Suscipit, sequi? Inventore eos quidem consectetur ex quos a sit quibusdam laborum corrupti, accusamus, minima commodi nulla tenetur at maiores labore laboriosam cupiditate dignissimos? Culpa exercitationem ratione corporis sequi quia eveniet fuga quaerat minima est illum provident quasi, aliquid inventore sunt.
-        </div>
+        <div class="boxex">box1</div>
+        <div class="boxex">box2</div>
+        <div class="boxex">box3</div>
+        <div class="boxex">box4</div>
+        <div class="boxex">box5</div>
+
     </div>
 
 </body>
+
 </html>
