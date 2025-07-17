@@ -23,7 +23,7 @@
     }
 
     .cont {
-      width: 21vw;
+      flex: 1;
       
       padding: 15px;
       background-color: white;
@@ -41,7 +41,7 @@
 
     img {
       width: 100%;
-      height: auto;
+    
       border-radius: 20px;
       object-fit: cover;
       border: 3px solid  #d4fc79;
@@ -105,10 +105,12 @@
 
     @media only screen and (max-width: 455px) {
       body {
-        background-color: yellow;
+        background-color: black;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding-right: 20px;
       }
 
       .cont {
