@@ -1,312 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nutflix 😎</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutflix 😎</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background-color: black;
-      color: white;
-      font-family: sans-serif;
-        overflow-x: hidden;
-    }
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
 
-    .bg {
-      width: 100vw;
-      height: 100vh;
-      background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/a927b1ee-784d-494a-aa80-cf7a062d2523/web/PK-en-20250714-TRIFECTA-perspective_3ea31bb5-14e1-41fe-997f-52b7ec8f28e4_large.jpg");
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
+        .bg {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/a927b1ee-784d-494a-aa80-cf7a062d2523/web/PK-en-20250714-TRIFECTA-perspective_3ea31bb5-14e1-41fe-997f-52b7ec8f28e4_large.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-    .bg::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
+        .bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
 
-    .nav {
-      height: 10vh;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
- 
-      position: relative;
-      z-index: 2;
-    }
+        .nav {
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
-    .nav img {
-      height: 60px;
-    }
+            position: relative;
+            z-index: 2;
+        }
 
-    .redbuton {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
+        .nav img {
+            height: 60px;
+        }
 
-
-    .redbuton:hover{
-        transition: all ease 0.3s;
-        transform: scale(1.11)
-    }
-    .mainbody {
-      position: relative;
-      z-index: 2;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .mainbody h2 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .mainbody h4 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .mainbody p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
-
-    .texta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .texta input {
-      padding: 12px 15px;
-      font-size: 18px;
-      border-radius: 4px;
-      border: 1px solid #999;
-      width: 300px;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-    }
-
-    .texta input::placeholder {
-      color: #ccc;
-    }
-    .texta input:hover{
-        transition: all ease 0.3s;
-        transform: scale(1.11)
-    }
-
-    .texta button {
-      font-size: 18px;
-      padding: 12px 20px;
-    }
-
-    .pinkcurve{
-        margin-top: 90px;
-        height: 5px;
-        width: 100%;
-        background-color: rgb(230, 23, 58);
-    }
-    
-    .trends{
-        width: 60%;
-        height: 50vh;
-        margin: 0px auto;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        gap: 20px;
-        text-align: start;
-        position: relative;
-        right: 90px;
-
-    }
-
-    .reason{
-        width: 70%;
-        height: 50vh;
-        margin: 0px auto;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        gap: 20px;
-        text-align: start;
-       
-        
-    
-    }
+        .redbuton {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
 
-    .movies{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-       
-        
-    }
+        .redbuton:hover {
+            transition: all ease 0.3s;
+            transform: scale(1.11)
+        }
+
+        .mainbody {
+            position: relative;
+            z-index: 2;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .mainbody h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .mainbody h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .mainbody p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .texta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .texta input {
+            padding: 12px 15px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: 1px solid #999;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+        .texta input::placeholder {
+            color: #ccc;
+        }
+
+        .texta input:hover {
+            transition: all ease 0.3s;
+            transform: scale(1.11)
+        }
+
+        .texta button {
+            font-size: 18px;
+            padding: 12px 20px;
+        }
+
+        .pinkcurve {
+            margin-top: 90px;
+            height: 5px;
+            width: 100%;
+            background-color: rgb(230, 23, 58);
+        }
+
+        .trends {
+            width: 60%;
+            height: 50vh;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+            text-align: start;
+            position: relative;
+            right: 90px;
+
+        }
+
+        .reason {
+            width: 70%;
+            height: 50vh;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+            text-align: start;
 
 
-    .desc{
-        border: 2px solid green;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        
-        gap: 23px;
 
-    }
-
-    .poster{
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        gap: -30px;
-    }
-
-    .movies h1{
-        color: black;
-        position: relative;
-        font-size: 120px;
-        left: 38px;
-        -webkit-text-stroke: 2px white;
-    }
-
-    .poster img{
-        border-radius: 10px;
-    }
-
-    
-    
+        }
 
 
-    .infocard{
-        width: 16vw;
-        height: 40vh;
-        border-radius: 20px;
-        padding: 15px;
-        background: linear-gradient(to bottom right, #3a0d61, #35043a);
-         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .infocard h2,p{
-        margin: 20px;
-    }
+        .movies {
+            display: flex;
+            justify-content: start;
+            align-items: center;
 
 
-    .infocard p{
-        font-size: 18px;
-        opacity: 0.8;
-    }
-  
-  
-  </style>
+        }
+
+
+        .desc {
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            gap: 23px;
+
+        }
+
+        .poster {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: -30px;
+        }
+
+        .poster:hover{
+            transition: all ease 0.3s;
+            transform: scale(1.11)
+        }
+
+        .movies h1 {
+            color: black;
+            position: relative;
+            font-size: 120px;
+            left: 38px;
+            -webkit-text-stroke: 2px white;
+        }
+
+        .poster img {
+            border-radius: 10px;
+        }
+
+
+
+
+
+        .infocard {
+            width: 16vw;
+            height: 40vh;
+            border-radius: 20px;
+            padding: 15px;
+            background: linear-gradient(to bottom right, #3a0d61, #35043a);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .infocard:hover{
+            transition: all ease 0.3s;
+            transform: translateY(-10px)
+        }
+
+        .infocard h2,
+        p {
+            margin: 20px;
+        }
+
+
+        .infocard p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="bg">
-    <div class="nav">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" />
-      <button class="redbuton">Sign In</button>
-    </div>
+    <div class="bg">
+        <div class="nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" />
+            <button class="redbuton">Sign In</button>
+        </div>
 
-    <div class="mainbody">
-      <h2>Unlimited movies, TV shows, and more</h2>
-      <h4>Starts at Rs 250. Cancel anytime.</h4>
-      <p>Ready to watch? Enter your email to create or restart your membership.</p>
-      <div class="texta">
-        <input type="email" placeholder="Email Address" />
-        <button class="redbuton">Get Started &nbsp; ➜</button>
-      </div>
-    </div>
+        <div class="mainbody">
+            <h2>Unlimited movies, TV shows, and more</h2>
+            <h4>Starts at Rs 250. Cancel anytime.</h4>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="texta">
+                <input type="email" placeholder="Email Address" />
+                <button class="redbuton">Get Started &nbsp; ➜</button>
+            </div>
+        </div>
 
-    <div class="pinkcurve"></div>
+        <div class="pinkcurve"></div>
 
-    <div class="trends">
-        <h1>Trending Now</h1>
-        <div class="movies">
-            <div class="poster">
-                <h1>1</h1>
-                <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQzXaGfD-AkdJYI8dTxdVCMHaEKLuB-za_6PRMt6qN8GzCNxzT0rP-njK5RM5nQ3hbyrteXaLslVDxXEs1zhhwV0xq6-piKQwFUOrrkuwBr-omC8vt0Nhx1PCYt1jgkRHmyY.webp?r=3f5" alt="">
-                
+        <div class="trends">
+            <h1>Trending Now</h1>
+            <div class="movies">
+                <div class="poster">
+                    <h1>1</h1>
+                    <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQzXaGfD-AkdJYI8dTxdVCMHaEKLuB-za_6PRMt6qN8GzCNxzT0rP-njK5RM5nQ3hbyrteXaLslVDxXEs1zhhwV0xq6-piKQwFUOrrkuwBr-omC8vt0Nhx1PCYt1jgkRHmyY.webp?r=3f5"
+                        alt="">
+
+                </div>
+                <div class="poster">
+                    <h1>2</h1>
+                    <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRS_77dhhj6XpMj91rPiEI2g7XGUysu1g0vGaXZNPTTscsBMNJY9OdDkVNsd-Z5CsSX7cdyWSqOjJNRjrWnOBuF4U-MUz7hlmGtIm6gwf_9vAl3_3dpZyOc8EMKt0pxKqXVp.webp?r=2a5"
+                        alt="">
+
+                </div>
+                <div class="poster">
+                    <h1>3</h1>
+                    <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABU73BvQjJgydQFEJ-vZZw9QtO8fL6lIxc71x9tOqxgDWh_BHokCWPIbGC5AxJjDk0D_sIH5KhmmYm9HLr3DKUXg8eo6nzF0rtSI.webp?r=d95"
+                        alt="">
+
+                </div>
+                <div class="poster">
+                    <h1>4</h1>
+                    <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaW57jWqw0Gs9gqgmW816THwyNfPqphIiruQRFy9KXtt9PTPJpB4kzDKriPcpNjPKCj0itu1Yfjl-CR8rGEokBHPKE4O9lZQHXHRRpUHEelwoKk8lOf4gqlws-HnR2iZeSk4.webp?r=609"
+                        alt="">
+
+                </div>
+                <div class="poster">
+                    <h1>5</h1>
+                    <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeu1SJZ1g3DGS_4xr2HFaFvq_0WuueYJ-UeZeRfAk4t7ajt_FWTKPDRwdGnF5vb2ejLHzZ9yyzrURGX6nVBoHkrY5s1Uk8w5yqRXi2c4WqWBiG0D06YxM9UUGWWehcFpHZYT.webp?r=b67"
+                        alt="">
+
+                </div>
             </div>
-             <div class="poster">
-                <h1>2</h1>
-                <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRS_77dhhj6XpMj91rPiEI2g7XGUysu1g0vGaXZNPTTscsBMNJY9OdDkVNsd-Z5CsSX7cdyWSqOjJNRjrWnOBuF4U-MUz7hlmGtIm6gwf_9vAl3_3dpZyOc8EMKt0pxKqXVp.webp?r=2a5" alt="">
-                
-            </div>
-             <div class="poster">
-                <h1>3</h1>
-                <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABU73BvQjJgydQFEJ-vZZw9QtO8fL6lIxc71x9tOqxgDWh_BHokCWPIbGC5AxJjDk0D_sIH5KhmmYm9HLr3DKUXg8eo6nzF0rtSI.webp?r=d95" alt="">
-                
-            </div>
-             <div class="poster">
-                 <h1>4</h1>
-                <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaW57jWqw0Gs9gqgmW816THwyNfPqphIiruQRFy9KXtt9PTPJpB4kzDKriPcpNjPKCj0itu1Yfjl-CR8rGEokBHPKE4O9lZQHXHRRpUHEelwoKk8lOf4gqlws-HnR2iZeSk4.webp?r=609" alt="">
-               
-            </div>
-             <div class="poster">
-                <h1>5</h1>
-                <img src="https://occ-0-1242-64.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeu1SJZ1g3DGS_4xr2HFaFvq_0WuueYJ-UeZeRfAk4t7ajt_FWTKPDRwdGnF5vb2ejLHzZ9yyzrURGX6nVBoHkrY5s1Uk8w5yqRXi2c4WqWBiG0D06YxM9UUGWWehcFpHZYT.webp?r=b67" alt="">
-                
+        </div>
+
+        <div class="reason">
+            <h1>More Reasons to Join</h1>
+            <div class="desc">
+                <div class="infocard">
+                    <h2>Enjoy on your TV</h2>
+                    <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div class="infocard">
+                    <h2>Download your shows to watch offline</h2>
+                    <p>Save your favorites easily and always have something to watch..</p>
+                </div>
+                <div class="infocard">
+                    <h2>Watch everywhere</h2>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+                <div class="infocard">
+                    <h2>Create profiles for kids</h2>
+                    <p>Send kids on adventures with their favorite characters in a space made just for them — free with
+                        your membership.</p>
+                </div>
+
+
             </div>
         </div>
     </div>
-
-    <div class="reason">
-        <h1>More Reasons to Join</h1>
-        <div class="desc">
-            <div class="infocard">
-                <h2>Enjoy on your TV</h2>
-                <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
-            </div>
-             <div class="infocard">
-                <h2>Download your shows to watch offline</h2>
-                <p>Save your favorites easily and always have something to watch..</p>
-            </div>
-             <div class="infocard">
-                <h2>Watch everywhere</h2>
-                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-            </div>
-             <div class="infocard">
-                <h2>Create profiles for kids</h2>
-                <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
-            </div>
-             
-
-        </div>
-    </div>
-  </div>
 </body>
+
 </html>
-
-
-
