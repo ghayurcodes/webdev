@@ -1,1 +1,0 @@
-let a=document.getElementsByClassName("nav")
