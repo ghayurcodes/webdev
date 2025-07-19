@@ -140,7 +140,7 @@
         }
 
         .trends {
-            width: 60%;
+            width: 70%;
             height: 50vh;
             margin: 0px auto;
             display: flex;
@@ -149,10 +149,28 @@
             flex-direction: column;
             gap: 20px;
             text-align: start;
-            position: relative;
-            right: 90px;
-
+            overflow-x: scroll;
+            overflow-y: hidden;
+          
         }
+
+          /* Custom scrollbar for .trends */
+    .trends::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .trends::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .trends::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    .trends::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
 
         .reason {
             width: 70%;
@@ -213,6 +231,9 @@
             border-radius: 10px;
         }
 
+        .heading{
+            margin-left: 15vw;
+        }
 
 
 
@@ -262,9 +283,9 @@
         </div>
 
         <div class="pinkcurve"></div>
-
+        <h1 class="heading">Trending Now</h1>
         <div class="trends">
-            <h1>Trending Now</h1>
+            
             <div class="movies">
                 <div class="poster">
                     <h1>1</h1>
