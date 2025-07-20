@@ -17,6 +17,8 @@
             color: white;
             font-family: sans-serif;
             overflow-x: hidden;
+            
+
         }
 
         .bg {
@@ -323,7 +325,7 @@
         }
 
         .extend input {
-            width: 500px;
+            width: 25vw;
             background-color: rgb(44, 42, 42);
         }
 
@@ -398,6 +400,151 @@
             border: 2px solid rgb(179, 179, 179);
             border-radius: 5px;
         }
+
+
+         @media screen and (max-width: 400px) {
+.nav {
+            height: 10vh;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .nav img {
+            height: 60px;
+        }
+
+        .redbuton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .mainbody h2 {
+            font-size: 48px;
+        }
+
+        .mainbody h4 {
+            font-size: 24px;
+        }
+
+        .mainbody p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .texta {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .texta input {
+            width: 300px;
+        }
+
+        .texta button {
+            width: auto;
+        }
+
+        .heading {
+            margin: 50px 0 0px 15vw;
+            font-size: 40px;
+        }
+
+        .trends {
+            width: 70%;
+            height: 40vh;
+            gap: 20px;
+        }
+
+        .movies h1 {
+            font-size: 120px;
+            left: 38px;
+        }
+
+        .poster img {
+            width: 200px; /* Revert to original size */
+        }
+
+        .reason {
+            width: 70%;
+            height: 50vh;
+            text-align: start;
+        }
+
+        .reason h1 {
+            font-size: 40px;
+        }
+
+        .desc {
+            flex-direction: row;
+            flex-wrap: nowrap; /* Prevent wrapping on large screens */
+            gap: 23px;
+        }
+
+        .infocard {
+            width: 16vw; /* Revert to original width */
+            max-width: none;
+            height: 40vh;
+        }
+
+        .infocard h2,
+        .infocard p {
+            margin: 20px;
+        }
+
+        .infocard p {
+            font-size: 18px;
+        }
+
+        .boxq {
+            width: 70vw;
+            height: 60vh;
+        }
+
+        .question h1 {
+            font-size: 18px;
+        }
+
+        .question svg {
+            height: 30px;
+            width: 30px;
+            position: relative;
+            left: 90px;
+        }
+
+        .boxa {
+            width: 60vw;
+            height: 14vh;
+        }
+
+        .boxa p {
+            font-size: 18px;
+        }
+
+        .extend input {
+            width: 25vw;
+        }
+
+        .botom {
+            width: 70vw;
+            height: 45vh;
+            gap: 40px;
+        }
+
+        .links {
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns on desktops */
+            row-gap: 10px;
+        }
+
+        .links a, .fnl p {
+            font-weight: 600;
+            font-size: initial; /* Revert to default or specific size */
+        }
+
+        .fnl {
+            gap: 30px;
+        }
+        
+         }
         
     </style>
 </head>
