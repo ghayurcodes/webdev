@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .all{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 40px;
-            align-items: center;
-            background-color: white;
-            
-           
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        .nav {
-            height: 360px;          
-            width: 100%;
-            background-color: red;
-        }
+    .cont {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
 
-        .body {
-             height: 360px;   
-             width: 100%;
-            background-color: greenyellow;
-        }
+    .sidebar {
+      flex: 0 0 200px;
+      background: linear-gradient(to bottom right, #4f8df2, #3066be);
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 2rem;
+    }
 
-        .lower {
-             height: 360px;   
-             width: 100%;
-            background-color: pink;
-        }
-    </style>
+    .sidebar ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
-</head>
+    .sidebar ul li {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-<body>
-    <div class="all">
-       <div class="nav"></div>
-    <div class="body"></div>
-    <div class="lower"></div> 
-    </div>
+    .sidebar ul li:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .main {
+      flex: 1 1 auto;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    .main h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .main p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
     
+  </style>
+</head>
+<body>
+  <div class="cont">
+    <div class="sidebar">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Support</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Welcome to the Main Area</h1>
+      <p>This is a responsive layout with a fixed sidebar and a flexible main content area. On smaller screens, the layout changes to stack vertically, and the sidebar becomes horizontal like a top menu.</p>
+    </div>
+  </div>
 </body>
-
 </html>
