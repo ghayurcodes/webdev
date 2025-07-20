@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .all{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 40px;
+            align-items: center;
+            background-color: white;
+            
+           
+        }
+
+        .nav {
+            height: 360px;          
+            width: 100%;
+            background-color: red;
+        }
+
+        .body {
+             height: 360px;   
+             width: 100%;
+            background-color: greenyellow;
+        }
+
+        .lower {
+             height: 360px;   
+             width: 100%;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="all">
+       <div class="nav"></div>
+    <div class="body"></div>
+    <div class="lower"></div> 
+    </div>
+    
+</body>
+
+</html>
