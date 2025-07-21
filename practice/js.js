@@ -1,8 +1,15 @@
+console.log("hello rohan");  // Logs greeting
+
+let a = document.getElementsByClassName("box");
+console.log(a);      
 
 
-let num = 5;
-let a=1
-for(let i=5;i>=1;i--){
-    a*=i
+
+
+
+for (let i = 0; i <= 4; i++) {
+    a[i].style.backgroundColor="red"
+    a[i].innerHTML="<p>hello</>"
+    
 }
-console.log(`Factorial of ${num} is`,a);
+
