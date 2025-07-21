@@ -1,9 +1,8 @@
 
 
-let n=[3,5,6,7]
-
-
-for (let index = 0; index < n.length; index++) {
-    console.log(n[index])
-    
+let num = 5;
+let a=1
+for(let i=5;i>=1;i--){
+    a*=i
 }
+console.log(`Factorial of ${num} is`,a);

@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Layout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>space ui</title>
   <style>
     * {
-      margin: 0;
       padding: 0;
+      margin: 0;
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .cont {
-      display: flex;
       height: 100vh;
       width: 100vw;
-    }
-
-    .sidebar {
-      flex: 0 0 200px;
-      background: linear-gradient(to bottom right, #4f8df2, #3066be);
+      background-color: gray;
       color: white;
-      padding: 2rem 1rem;
+      font-size: 1.5rem;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+    .cont {
+      background-image: url('http://images.wallpaperscraft.com/image/single/stars_space_galaxy_117958_2560x1080.jpg');
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+
+    .nav {
+     
+       background-color: rgba(128, 0, 128, 0.4);
+        backdrop-filter: blur(0.3rem);
+     
+      
+      border-radius: 4rem;
+      
+    }
+
+    .nav div{
+      padding: 0.6rem 0px;
+      position: relative;
+      z-index: 2;
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      
+    }
+
+    .nav div img{
+      height: 4rem;
+      border-radius: 30px;
+      
+    }
+
+    .nav div ul{
+      display: flex;
       justify-content: start;
-      gap: 2rem;
-    }
-
-    .sidebar ul {
+      align-items: start;
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+      gap: 5rem;
     }
 
-    .sidebar ul li {
-      background-color: rgba(255, 255, 255, 0.15);
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .sidebar ul li:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-    }
-
-    .main {
-      flex: 1 1 auto;
-      background-color: #f4f4f4;
-      padding: 2rem;
-      overflow-y: auto;
-    }
-
-    .main h1 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    .main p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    
+  
   </style>
 </head>
+
 <body>
   <div class="cont">
-    <div class="sidebar">
+    <div class="nav">
+      <div >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG81O6N4WgJiDGI6agR47t9z729GQG9UNg_w&s" alt="">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          About</li>
+        <li> Home</li>
+        <li>Join</li>
         <li>Support</li>
       </ul>
+      </div>
+      
     </div>
-    <div class="main">
-      <h1>Welcome to the Main Area</h1>
-      <p>This is a responsive layout with a fixed sidebar and a flexible main content area. On smaller screens, the layout changes to stack vertically, and the sidebar becomes horizontal like a top menu.</p>
-    </div>
+
+    <body>
+
+    </body>
   </div>
 </body>
+
 </html>
