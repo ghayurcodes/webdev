@@ -12,6 +12,6 @@ for (let i = 0; i <= 4; i++) {
     a[i].innerHTML="<p>hello</p>"
     
 }
- a[4].hidden="true"
+ w
 
 console.log( a[3].textContent)
