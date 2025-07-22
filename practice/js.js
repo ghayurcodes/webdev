@@ -1,17 +1,26 @@
-console.log("hello Ghayur");  // Logs greeting
+// console.log("hello Ghayur");  // Logs greeting
 
-let a = document.getElementsByClassName("box");
-console.log(a);      
-
-
+// let a = document.querySelectorAll(".box");
+// console.log(a);      
 
 
 
-for (let i = 0; i <= 4; i++) {
-    a[i].style.backgroundColor="red"
-    a[i].innerHTML="<p>hello</p>"
+
+
+// for (let i = 0; i <= 4; i++) {
+//     a[i].style.backgroundColor="yellow"
+//     a[i].innerHTML="<p>hello</p>"
+//       a[i].style.color="black"
     
-}
- w
+// }
+ 
 
-console.log( a[3].textContent)
+// console.log( a[3].textContent)
+
+
+// let div=document.createElement("p")
+// div.innerHTML="hello from <b>hgqhqhj</b>js"
+// div.setAttribute("class","lol");
+// a[3].prepend(div)
+
+// document.querySelector(".lol").style.color="red"
