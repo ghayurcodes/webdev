@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Video Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(214, 205, 205);
+      height: 100vh;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      
+    }
+
+    .main {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, minmax(400px,1fr));
+    }
+
+    .cont {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      display: flex;
+      padding: 10px;
+      gap: 12px;
+      color: whitesmoke;
+      overflow: hidden;
+    }
+
+    .image {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .image img {
+      width: 200px;
+      height: 113px;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .dura {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      padding: 2px 5px;
+      font-size: 12px;
+      border-radius: 4px;
+      background-color: rgb(40, 39, 39);
+      color: white;
+    }
+
+    .info h3 {
+      white-space: wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      font-size: 1rem;
+    }
+
+    .info p {
+      color: rgb(180, 180, 180);
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .emo{
+        font-size: 4rem;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+    @media (max-width: 800px) {
+      .cont {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+      }
+
+      .main {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(1, minmax(300px,1fr));
+    }
+
+      .image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .image {
+        width: 100%;
+      }
+
+      .info h3 {
+        width: 70%;
+        
+      }
+
+      .info{
+        margin: 0px auto;
+      }
+
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="main"></div>
+  <div class="emo">😭</div>
+
+  <script>
+    function card(title, cname, views, upload_date, duration, thumbnail) {
+      return `
+        <div class="cont">
+          <div class="image">
+            <img src="${thumbnail}" alt="Video thumbnail">
+            <div class="dura">${duration}</div>
+          </div>
+          <div class="info">
+            <h3 title="${title}">${title}</h3>
+            <p>
+              <span>${cname}</span> • 
+              <span>${views}M views</span> • 
+              <span>${upload_date}</span>
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    const main = document.querySelector(".main");
+const html = card(
+        "Installing VS Code & How Websites Work | Sigma Web Development Course -",
+        "CodeWithHarry",
+        1.9,
+        "1 year ago",
+        "30:01",
+        "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg"
+      );
+    for (let i = 0; i < 8; i++) {
+      
+      main.innerHTML += html;
+    }
+    console.log(typeof html)
+  </script>
+</body>
+</html>

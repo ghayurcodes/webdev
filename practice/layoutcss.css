@@ -1,139 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      padding: 10px;
-     
-      
-      min-height: 100vh;
-      
-      background-image: url('http://images.wallpaperscraft.com/image/single/stars_space_galaxy_117958_2560x1080.jpg');
-      backdrop-filter: hue-rotate(27deg);
-      background-size: contain; 
-      background-color: gray;
-      color: white;
-      font-size: 1.5rem;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+body {
+  padding: 10px;
 
 
-   
+  min-height: 100vh;
+
+  background-image: url('http://images.wallpaperscraft.com/image/single/stars_space_galaxy_117958_2560x1080.jpg');
+  backdrop-filter: hue-rotate(27deg);
+  background-size: contain;
+  background-color: gray;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 
-    .nav {
-       height: 13vh;
+
+
+.nav {
+  
+  
+
+  height: 13vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(128, 0, 128, 0.4);
+
+  box-shadow: -1px 4px 20px 0px #3a0540;
+
+  border-radius: 2.5rem;
+  margin: 0rem 2rem 5rem 2rem;
+
+}
+
+
+
+.nav img {
+
+  z-index: 3;
+  height: 4rem;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+
+.nav img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2) rotate(360deg);
+  box-shadow: -1px 4px 20px 0px #f1edf1;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav ul li {
+  border: 2px solid white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+
+}
+
+.nav ul li:hover {
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+  transform: scale(1.2);
+  box-shadow: -1px 4px 20px 0px #f1edf1;
+  cursor: pointer;
+
+
+}
+
+
+.mainbody {
+  margin: 2rem;
+  border: 2px solid white;
+  height: 90vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.box {
+  border: 10px solid green;
+
+  background-color: whitesmoke;
+  margin: 1rem;
+}
+
+.bottom {
+  height: 40vh;
+  margin: 2rem;
+  border: 2px solid white;
+  background-image: url("https://s46675.pcdn.co/wp-content/uploads/2013/01/mountain-02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+@media screen and (max-width:644px) {
+  .nav {
+    margin-bottom: 0;
+    padding: 0.6rem 0px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(128, 0, 128, 0.4);
-  
-    box-shadow: -1px 4px 20px 0px #3a0540;
-   
-    border-radius: 2.5rem;
-    margin: 0rem 2rem 5rem 2rem;
-      
-    }
+    flex-direction: column;
+    gap: 1rem;
+
+  }
 
 
 
-    .nav  img{
-      height: 4rem;
-      border-radius: 30px;
-      cursor: pointer;
-      
-    }
-
-     .nav  img:hover{
-       transition: all 0.3s ease;
-      transform: scale(1.2) rotate(360deg);
-      box-shadow: -1px 4px 20px 0px #f1edf1;
-    }
-
-    .nav  ul{
-      display: flex;
-      justify-content: start;
-      align-items: start;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav  ul li{
-      border: 2px solid white;
-      padding: 0.4rem 0.6rem;
-      border-radius: 20px;
-    
-    }
-    .nav  ul li:hover{
-      transition: all 0.3s ease;
-      border: 2px solid white;
-      padding: 0.4rem 0.6rem;
-      border-radius: 20px;
-      transform: scale(1.2);
-      box-shadow: -1px 4px 20px 0px #f1edf1;
-      cursor: pointer;
-      
-    
-    }
-
-
-    .mainbody{
-      margin:2rem;
-      border:  2px solid white;
-    height: 90vh;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-     
-    }
-
-    .box{
-      border: 10px solid green;
-      
-      background-color: whitesmoke;
-      margin: 1rem;
-    }
-
-    .bottom{
-      height: 40vh;
-      margin: 2rem;
-      border: 2px solid white;
-      background-image: url("https://s46675.pcdn.co/wp-content/uploads/2013/01/mountain-02.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      
-    }
-    @media screen and (max-width:644px) {
-       .nav {
-        margin-bottom: 0;
-      padding: 0.6rem 0px;
-        height: auto;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: column;
-      gap: 1rem;
-      
-    }
-
-
-    
-    .nav  ul li {
+  .nav ul li {
     text-align: center;
     border: 2px solid white;
     padding: 0.4rem 0.6rem;
     border-radius: 20px;
-                /* Make each li span full width */
-    box-sizing: border-box;    /* Include border and padding in width */
+    /* Make each li span full width */
+    box-sizing: border-box;
+    /* Include border and padding in width */
   }
 
-  .nav  ul {
-       width: 90%;
+  .nav ul {
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -141,21 +147,20 @@
     margin: 1rem 0px;
   }
 
-  .mainbody{
-         border: 2px solid white;
+  .mainbody {
+    border: 2px solid white;
     height: 70vh;
     padding: 0rem;
     display: grid;
     margin: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-     
-    }
 
-     .box{
-      border: 0.1rem solid rgb(215, 10, 34);
-      margin: 0.3rem;
-    }
+  }
 
-    }
- 
+  .box {
+    border: 0.1rem solid rgb(215, 10, 34);
+    margin: 0.3rem;
+  }
+
+}
