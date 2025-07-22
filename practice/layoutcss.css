@@ -8,10 +8,12 @@
     body {
       padding: 10px;
      
-      height: 100vh;
+      
+      min-height: 100vh;
+      
       background-image: url('http://images.wallpaperscraft.com/image/single/stars_space_galaxy_117958_2560x1080.jpg');
       backdrop-filter: hue-rotate(27deg);
-      background-size: cover; 
+      background-size: contain; 
       background-color: gray;
       color: white;
       font-size: 1.5rem;
@@ -23,7 +25,7 @@
 
 
     .nav {
-       height: 13%;
+       height: 13vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -79,8 +81,9 @@
 
 
     .mainbody{
+      margin:2rem;
       border:  2px solid white;
-    height: 90%;
+    height: 90vh;
       padding: 2rem;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -96,14 +99,20 @@
     }
 
     .bottom{
-      height: 40%;
-      margin: 3%;
+      height: 40vh;
+      margin: 2rem;
       border: 2px solid white;
+      background-image: url("https://s46675.pcdn.co/wp-content/uploads/2013/01/mountain-02.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
     }
     @media screen and (max-width:644px) {
        .nav {
+        margin-bottom: 0;
       padding: 0.6rem 0px;
-    
+        height: auto;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -133,13 +142,19 @@
   }
 
   .mainbody{
-      border:  2px solid white;
-    height: 90%;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: 1fr ;
-    
+         border: 2px solid white;
+    height: 70vh;
+    padding: 0rem;
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
      
+    }
+
+     .box{
+      border: 0.1rem solid rgb(215, 10, 34);
+      margin: 0.3rem;
     }
 
     }
