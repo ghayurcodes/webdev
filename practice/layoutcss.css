@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
 
   background-image: url('http://images.wallpaperscraft.com/image/single/stars_space_galaxy_117958_2560x1080.jpg');
-  backdrop-filter: hue-rotate(27deg);
+
   background-size: contain;
   background-color: gray;
   color: white;
@@ -24,10 +24,12 @@ body {
 
 
 .nav {
-  
-  
+  position: sticky;
+  top: 10px;
 
-  height: 13vh;
+
+backdrop-filter:blur(10px);
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -43,7 +45,7 @@ body {
 
 
 .nav img {
-
+  margin: 10px;
   z-index: 3;
   height: 4rem;
   border-radius: 30px;
