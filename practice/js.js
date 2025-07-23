@@ -1,4 +1,4 @@
-// console.log("hello Ghayur");  // Logs greeting
+console.log("hello Ghayur");  // Logs greeting
 
 // let a = document.querySelectorAll(".box");
 // console.log(a);      
@@ -21,6 +21,42 @@
 // let div=document.createElement("p")
 // div.innerHTML="hello from <b>hgqhqhj</b>js"
 // div.setAttribute("class","lol");
-// a[3].prepend(div)
+// a[3].append(div)
 
 // document.querySelector(".lol").style.color="red"
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector(".box").addEventListener("click",()=>{
+    // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
+    alert("box clicked")
+})
+
+
+let btn= document.querySelector(".btn")
+btn.addEventListener("click",(e)=>{
+    e.stopPropagation()
+    // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
+    alert("button clicked")
+})
+
+
+let s=setInterval(() => {
+    btn.style.backgroundColor="pink"
+}, 1000);
+
+
+setInterval(() => {
+clearTimeout(s)
+}, 3000);
+
+
