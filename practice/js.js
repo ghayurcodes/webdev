@@ -36,50 +36,49 @@ console.log("hello Ghayur");  // Logs greeting
 
 
 
-document.querySelector(".box").addEventListener("click",()=>{
-    // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
-    alert("box clicked")
-})
+// document.querySelector(".box").addEventListener("click",()=>{
+//     // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
+//     alert("box clicked")
+// })
 
 
-let btn= document.querySelector(".btn")
-btn.addEventListener("click",(e)=>{
-    e.stopPropagation()
-    // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
-    alert("button clicked")
-})
+// let btn= document.querySelector(".btn")
+// btn.addEventListener("click",(e)=>{
+//     e.stopPropagation()                                                                          //event handeling
+//     // btn.style.backgroundColor=(btn.style.backgroundColor=="white"?"green":"white")
+//     alert("button clicked")
+// })
 
 
-let s=setInterval(() => {
-    btn.style.backgroundColor=(btn.style.backgroundColor=="green"?"red":"green")
-   
-}, 2000);
-
-
+// let s=setInterval(() => {
+//     btn.style.backgroundColor=(btn.style.backgroundColor=="green"?"red":"green")
+// }, 2000);
 
 
 
 
 
-let p = new Promise((resolve, reject) => {
-    let num = Math.random();
-
-    if (num < 0.5) {
-        setTimeout(() => {
-            console.log("wrong!");
-            reject("num less than 0.5");
-        }, 3000);
-    } else {
-        setTimeout(() => {
-            console.log("correct!");
-            resolve("num greater than 0.5");
-        }, 3000);
-    }
-});
 
 
-p.then((val) => {
-    console.log("Resolved:", val);
-}).catch((err) => {
-    console.log("Rejected:", err);
-});
+// let p = new Promise((resolve, reject) => {
+//     let num = Math.random();
+
+//     if (num < 0.5) {
+//         setTimeout(() => {
+//             console.log("wrong!");
+//             reject("num less than 0.5");
+//         }, 3000);
+//     } else {
+//         setTimeout(() => {
+//             console.log("correct!");
+//             resolve("num greater than 0.5");                                                 //promise 
+//         }, 3000);
+//     }
+// });
+
+
+// p.then((val) => {
+//     console.log("Resolved:", val);
+// }).catch((err) => {
+//     console.log("Rejected:", err);
+// });
