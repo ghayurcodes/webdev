@@ -56,3 +56,30 @@ let s=setInterval(() => {
 }, 2000);
 
 
+
+
+
+
+
+let p = new Promise((resolve, reject) => {
+    let num = Math.random();
+
+    if (num < 0.5) {
+        setTimeout(() => {
+            console.log("wrong!");
+            reject("num less than 0.5");
+        }, 3000);
+    } else {
+        setTimeout(() => {
+            console.log("correct!");
+            resolve("num greater than 0.5");
+        }, 3000);
+    }
+});
+
+
+p.then((val) => {
+    console.log("Resolved:", val);
+}).catch((err) => {
+    console.log("Rejected:", err);
+});
