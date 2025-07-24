@@ -52,12 +52,7 @@ btn.addEventListener("click",(e)=>{
 
 let s=setInterval(() => {
     btn.style.backgroundColor=(btn.style.backgroundColor=="green"?"red":"green")
-    btn.style.transform = (btn.style.transform =="scale(1.2)"?"scale(1)":"scale(1.2)")
-}, 500);
-
-
-setInterval(() => {
-clearTimeout(s)
-}, 10000);
+   
+}, 2000);
 
 
