@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacking Simulation</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">Starting...</div>
+
+  <script>
+    const text = document.querySelector(".main");
+
+    const cmd = [
+      "Initializing hacking",
+      "Reading your files",
+      "Password files detected",
+      "Sending all data to server",
+      "Cleaning up"
+    ];
+
+    let i = 0;
+
+    function showCommandWithDots(command) {
+      let dotCount = 0;
+      const maxDots = 3;
+
+      const interval = setInterval(() => {
+        text.innerHTML = command + '.'.repeat(dotCount);
+        dotCount++;
+
+        if (dotCount > maxDots) {
+          clearInterval(interval);
+        }
+      }, 500);
+    }
+
+    function runCommands() {
+      if (i < cmd.length) {
+        showCommandWithDots(cmd[i]);
+        i++;
+      } else {
+        clearInterval(commandLoop);
+        text.innerHTML = "HACKING COMPLETE ✅";
+      }
+    }
+
+    const commandLoop = setInterval(runCommands, 3000);
+  </script>
+</body>
+</html>
