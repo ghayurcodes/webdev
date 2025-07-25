@@ -21,44 +21,50 @@
   <div class="main">Starting...</div>
 
   <script>
-    const text = document.querySelector(".main");
+    // const text = document.querySelector(".main");
 
-    const cmd = [
-      "Initializing hacking",
-      "Reading your files",
-      "Password files detected",
-      "Sending all data to server",
-      "Cleaning up"
-    ];
+    // const cmd = [
+    //   "Initializing hacking",
+    //   "Reading your files",
+    //   "Password files detected",
+    //   "Sending all data to server",
+    //   "Cleaning up"
+    // ];
 
-    let i = 0;
+    // let i = 0;
 
-    function showCommandWithDots(command) {
-      let dotCount = 0;
-      const maxDots = 3;
+    // function showCommandWithDots(command) {
+    //   let dotCount = 0;
+    //   const maxDots = 3;
 
-      const interval = setInterval(() => {
-        text.innerHTML = command + '.'.repeat(dotCount);
-        dotCount++;
+    //   const interval = setInterval(() => {
+    //     text.innerHTML = command + '.'.repeat(dotCount);
+    //     dotCount++;
 
-        if (dotCount > maxDots) {
-          clearInterval(interval);
-        }
-      }, 500);
-    }
+    //     if (dotCount > maxDots) {
+    //       clearInterval(interval);
+    //     }
+    //   }, 500);
+    // }
     
 
-    function runCommands() {
-      if (i < cmd.length) {
-        showCommandWithDots(cmd[i]);
-        i++;
-      } else {
-        clearInterval(commandLoop);
-        text.innerHTML = "HACKING COMPLETE ✅";
-      }
-    }
+    // function runCommands() {
+    //   if (i < cmd.length) {
+    //     showCommandWithDots(cmd[i]);
+    //     i++;
+    //   } else {
+    //     clearInterval(commandLoop);
+    //     text.innerHTML = "HACKING COMPLETE ✅";
+    //   }
+    // }
 
-    const commandLoop = setInterval(runCommands, 3000);
+    // const commandLoop = setInterval(runCommands, 3000);
+
+
+    let a=Number(prompt("enter first number"))
+    
+    console.log(a)
+
     
   </script>
 </body>
