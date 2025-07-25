@@ -82,3 +82,13 @@ console.log("hello Ghayur");  // Logs greeting
 // }).catch((err) => {
 //     console.log("Rejected:", err);
 // });
+
+
+
+
+
+// (void function main(){
+// console.log("iif invoked")                                                   //iif(imidetilay invoked function)
+// })()
+
+
