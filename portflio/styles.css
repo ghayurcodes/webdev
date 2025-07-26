@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:white;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+}
+
+.top{
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0px 100%);
+}
+
+.nav img{
+    height: 4rem;
+    border-radius: 2rem;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: red;
+
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.nav ul li{
+    letter-spacing: 1px;
+    padding: 0.3rem 1.5rem;
+    
+}
+.nav ul li:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+   
+    
+}
+
+
+.desc{
+    padding: 15rem 5rem;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: greenyellow;
+    flex-direction: column;
+}
+
+.desc h1{
+    font-weight: 800;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+}
+
+.desc p:nth-child(3){
+    color: rgb(181, 174, 174)
+}
+
+
+.btn{
+    margin-top: 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.btn:hover{
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    transform: translateY(-5px)
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    background: pink;
+}
