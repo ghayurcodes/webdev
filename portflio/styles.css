@@ -60,7 +60,8 @@ body {
 
 
 .desc {
-    padding: 20rem 5rem;
+    margin: 2rem;
+    height: 90vh;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -115,6 +116,7 @@ body {
 }
 
 .img {
+    
     background-color: black;
     width: 50%;
 
@@ -144,12 +146,10 @@ body {
 
 
 .projects {
-    background-color: white;
-    display: grid;
-
-
+    width: 80vw;
+   
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     flex-wrap: wrap;
     padding: 1rem;
@@ -193,7 +193,7 @@ body {
 
 .contact {
     background-color: rgb(211, 211, 211);
-    height: 70vh;
+ 
     clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%);
     padding: 2rem;
     display: flex;
@@ -203,6 +203,7 @@ body {
 }
 
 .formc {
+    margin: 2.5rem;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -304,3 +305,42 @@ body {
     margin-bottom: 4rem;
 }
 
+@media screen and (max-width:600px){
+    .nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+   
+
+}
+
+.nav ul{
+    flex-direction: column;
+}
+.body{
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    
+}
+
+.desc{
+    margin-top: 3rem;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+    height: auto;
+}
+
+.formc{
+    width: 100%;
+    margin: 3rem 0;
+}
+.img img{
+    visibility: hidden;
+}
+}
