@@ -1,94 +1,99 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:white;
+body {
+    background-color: white;
     height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    
+
+
 }
 
-.top{
+.top {
     padding: 1rem;
     background-color: black;
     color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0px 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0px 100%);
 }
 
-.nav img{
+.nav img {
     height: 4rem;
     border-radius: 2rem;
-    
+    cursor: pointer;
+
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
 
 }
 
-.nav ul{
+.nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
-.nav ul li{
+.nav ul li {
     letter-spacing: 1px;
     padding: 0.3rem 1.5rem;
-    
+
 }
-.nav ul li:hover{
+
+.nav ul li:hover {
     background-color: white;
     color: black;
     transition: all 0.3s ease;
     border-radius: 5px;
-   
-    
+    cursor: pointer;
+
+
 }
 
 
-.desc{
-    padding: 15rem 5rem;
+.desc {
+    padding: 20rem 5rem;
     width: 50%;
-    height: 50%;
     display: flex;
     justify-content: center;
     align-items: start;
-    background-color: greenyellow;
+    background-color: black;
     flex-direction: column;
 }
 
-.desc h1{
+.desc h1 {
     font-weight: 800;
     font-size: 4.5rem;
     letter-spacing: 1px;
 }
 
-.desc p:nth-child(3){
+.desc p:nth-child(3) {
     color: rgb(181, 174, 174)
 }
 
 
-.btn{
+.btn {
     margin-top: 2rem;
     background-color: white;
     color: black;
     border-radius: 5px;
     font-weight: 700;
     padding: 0.5rem 1rem;
+     border: 2px solid black;
+     cursor: pointer;
 }
 
 
 
-.btn:hover{
+.btn:hover {
     margin-top: 2rem;
     background-color: black;
     color: white;
@@ -96,14 +101,153 @@ body{
     border-radius: 5px;
     font-weight: 700;
     padding: 0.5rem 1rem;
-    transform: translateY(-5px)
+    
+    border: 2px solid white;
 }
 
-.body{
+.body {
+    height: 95vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+   
+    
+}
+
+.img {
+    background-color: black;
+    width: 50%;
+ 
+}
+
+.img img {
+  
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.middle{
+    background-color: white;
+    
+   
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.middle h1{
+    margin: 1rem auto;
+
+}
+
+
+.projects{
+    background-color: white;
+    display: grid;
+    
+    /* display: grid;
+    grid-template-columns: repeat(3,minmax(auto,1fr)); */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+ 
+}
+.proj{
+    height: 360px;
+    width: 300px;
+  
+}
+
+.proj:nth-child(even) {
+  height: 300px;
+}
+
+
+.proj img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+
+.proj img:hover{
+    transition: 0.3s all ease;
+    transform:  translateY(5px);
+    border: 5px solid rgb(189, 188, 188);
+}
+.contact{
+    background-color: pink;
+    height: 70vh;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%);
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
-.img{
-    background: pink;
-}
+
+.formc{
+    
+            background-color: white;
+            padding: 2rem; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+            max-width: 32rem;
+          
+        }
+
+         .formc h1{
+        margin: 1rem auto;
+        text-align: center;
+      }
+
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem; /* Equivalent to px-4 py-3 */
+            font-size: 1rem;
+            color: #1a202c; /* Equivalent to text-gray-800 */
+            transition: border-color 0.3s ease-in-out;
+            border-radius: 0.375rem; /* Equivalent to rounded-md */
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: #6b7280; /* Equivalent to placeholder-gray-500 */
+        }
+
+        .form-input {
+            border: none;
+            border-bottom: 2px solid #d1d5db; /* Equivalent to border-b-2 border-gray-300 */
+            background-color: transparent; /* Ensure background is transparent */
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #6b7280; /* Equivalent to focus:border-gray-500 */
+        }
+
+        .form-textarea {
+            border: 2px solid #d1d5db; /* Equivalent to border-2 border-gray-300 */
+            resize: vertical; /* Equivalent to resize-y */
+            min-height: 8rem; /* Set a minimum height for the textarea */
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: #6b7280; /* Equivalent to focus:border-gray-500 */
+        }
+
+       
+
+     
