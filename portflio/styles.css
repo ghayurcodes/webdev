@@ -116,16 +116,18 @@ body {
 }
 
 .img {
-    
+    height: 90vh;
     background-color: black;
     width: 50%;
+   padding-top: 2rem;
 
 }
 
 .img img {
-    border-radius: 100rem;
-    width: 100%;
-    object-fit: contain;
+   height: 114%;
+   width: 100%;
+   object-fit: cover;
+   
 }
 
 
