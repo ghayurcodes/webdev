@@ -342,6 +342,9 @@ body {
     width: 100%;
     margin: 3rem 0;
 }
+.img{
+    height: auto;
+}
 .img img{
     visibility: hidden;
 }
