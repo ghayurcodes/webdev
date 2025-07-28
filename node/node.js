@@ -1,14 +1,17 @@
-// Step 1: Import express
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
-// Step 2: Define a route
-app.get('/', (req, res) => {
-  res.send('Hello from Express! hello ghayur king of the pakistan');
+// Serve static files from "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
+// Optional dynamic route (e.g., /ghayur)
+app.get(`/:slug`, (req, res) => {
+  console.log('Route param (slug):', req.params.slug);
+  console.log('Query params:', req.query);
+  res.send(`Hello from Express! Hello Ghayur, king of 7 seas ${req.params.slug}`);
 });
 
-// Step 3: Start the server
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
