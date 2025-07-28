@@ -156,7 +156,7 @@
 
         }
 
-        /* Custom scrollbar for .trends */
+        
         .trends::-webkit-scrollbar {
             height: 6px;
         }
@@ -402,149 +402,73 @@
         }
 
 
-         @media screen and (max-width: 400px) {
-.nav {
-            height: 10vh;
-            justify-content: space-around;
-            padding: 0;
-        }
+        @media screen and (max-width:400px) {
+            .mainbody h2{
+                font-size: 30px;
+            }
+            .trends{
+                padding: 10px;
+                width: 100%;
+            }
 
-        .nav img {
-            height: 60px;
-        }
+            .reason{
+                overflow-x: scroll;
+                width: 100%;
+                padding: 10px;
+                
+            }
+            .desc{
+                overflow-x: scroll;
+                overflow-y: hidden;
+            }
+            .infocard{
+                 width: 100%;
+            }
+              .infocard p{
+                font-size: 16px;
+            }
+             .infocard h2{
+                font-size: 18px;
+            }
+            .boxq{
+                width: 100%;
+                height: auto;
+            }
+            .question{
+                
+                width: 90%;
+                padding: 10px;
+                justify-content: start;
+                
+            }
+            .botom{
+                padding: 10px;
+                width: 100%;
+            }
 
-        .redbuton {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
+            .boxa{
+                height: auto    ;
+            }
+            .link a{
+                font-size: 15px;
+            }
+            .fnl p{
+                margin-bottom: 20px;
+            }
+            .extend input{
+                width: 100%;
+            }
+            .question h1{
+                font-size: 19px;
+                width: 50%;
+            }
+            .links{
+                row-gap: 20px;
+                column-gap: 20px;
+            }
 
-        .mainbody h2 {
-            font-size: 48px;
-        }
 
-        .mainbody h4 {
-            font-size: 24px;
         }
-
-        .mainbody p {
-            font-size: 18px;
-            max-width: 600px;
-        }
-
-        .texta {
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        .texta input {
-            width: 300px;
-        }
-
-        .texta button {
-            width: auto;
-        }
-
-        .heading {
-            margin: 50px 0 0px 15vw;
-            font-size: 40px;
-        }
-
-        .trends {
-            width: 70%;
-            height: 40vh;
-            gap: 20px;
-        }
-
-        .movies h1 {
-            font-size: 120px;
-            left: 38px;
-        }
-
-        .poster img {
-            width: 200px; /* Revert to original size */
-        }
-
-        .reason {
-            width: 70%;
-            height: 50vh;
-            text-align: start;
-        }
-
-        .reason h1 {
-            font-size: 40px;
-        }
-
-        .desc {
-            flex-direction: row;
-            flex-wrap: nowrap; /* Prevent wrapping on large screens */
-            gap: 23px;
-        }
-
-        .infocard {
-            width: 16vw; /* Revert to original width */
-            max-width: none;
-            height: 40vh;
-        }
-
-        .infocard h2,
-        .infocard p {
-            margin: 20px;
-        }
-
-        .infocard p {
-            font-size: 18px;
-        }
-
-        .boxq {
-            width: 70vw;
-            height: 60vh;
-        }
-
-        .question h1 {
-            font-size: 18px;
-        }
-
-        .question svg {
-            height: 30px;
-            width: 30px;
-            position: relative;
-            left: 90px;
-        }
-
-        .boxa {
-            width: 60vw;
-            height: 14vh;
-        }
-
-        .boxa p {
-            font-size: 18px;
-        }
-
-        .extend input {
-            width: 25vw;
-        }
-
-        .botom {
-            width: 70vw;
-            height: 45vh;
-            gap: 40px;
-        }
-
-        .links {
-            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns on desktops */
-            row-gap: 10px;
-        }
-
-        .links a, .fnl p {
-            font-weight: 600;
-            font-size: initial; /* Revert to default or specific size */
-        }
-
-        .fnl {
-            gap: 30px;
-        }
-        
-         }
         
     </style>
 </head>
@@ -631,82 +555,58 @@
         <h1 class="heading">Frequently Asked Questions</h1>
         <div class="boxq">
             <div class="question">
-                <h1>What is Netflix?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>What is Netflix?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
             <div class="question">
-                <h1>How Much Netflix cost?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>How Much Netflix cost?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
             <div class="question">
-                <h1>Where can I watch?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>Where can I watch?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
             <div class="question">
-                <h1>How do I cancel?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>How do I cancel?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
             <div class="question">
-                <h1>What can I watch on Netflix?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>What can I watch on Netflix?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
             <div class="question">
-                <h1>Is Netflix good for kids?</h1><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256"
-                    viewBox="0 0 256 256" xml:space="preserve">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path
-                            d="M 86.5 41.5 h -38 v -38 C 48.5 1.567 46.933 0 45 0 c -1.933 0 -3.5 1.567 -3.5 3.5 v 38 h -38 C 1.567 41.5 0 43.067 0 45 s 1.567 3.5 3.5 3.5 h 38 v 38 c 0 1.933 1.567 3.5 3.5 3.5 c 1.933 0 3.5 -1.567 3.5 -3.5 v -38 h 38 c 1.933 0 3.5 -1.567 3.5 -3.5 S 88.433 41.5 86.5 41.5 z"
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(241, 241, 233); fill-rule: nonzero; opacity: 1;"
-                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                <h1>Is Netflix good for kids?</h1><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <path
+    d="M86.5 41.5h-38v-38C48.5 1.567 46.933 0 45 0s-3.5 1.567-3.5 3.5v38h-38C1.567 41.5 0 43.067 0 45s1.567 3.5 3.5 3.5h38v38c0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5v-38h38c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+    fill="#f1f1e9"
+  />
+</svg>
+
             </div>
         </div>
 
