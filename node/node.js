@@ -5,6 +5,7 @@ const port = 3000;
 
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Optional dynamic route (e.g., /ghayur)
 app.get(`/:slug`, (req, res) => {
   console.log('Route param (slug):', req.params.slug);
