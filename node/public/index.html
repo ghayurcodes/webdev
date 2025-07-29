@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>POST Test</title>
 </head>
 <body>
-    <h1>hello ghayur</h1>
-    <input type="text">
+  <h1>Send a Message to server</h1>
+  <form id="messageForm">
+    <label>Name: <input type="text" id="name" required></label><br><br>
+    <label>Message: <input type="text" id="message" required></label><br><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="response"></p>
+
+  <script>
+    const form = document.getElementById('messageForm');
+    const responseText = document.getElementById('response');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+     
+      const data = {
+  name: document.getElementById('name').value,
+  message: document.getElementById('message').value
+};
+
+      const res = await fetch('/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const text = await res.text();
+      responseText.innerText = text;
+    });
+  </script>
 </body>
 </html>
