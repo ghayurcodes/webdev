@@ -1,3 +1,3 @@
-use("temp")
+use("test")
 
-db.users.count()
+db.users.getIndexes()
