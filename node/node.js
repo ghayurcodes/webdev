@@ -14,7 +14,6 @@ app.post('/submit', (req, res) => {
   const name=req.body.name;
   const message=req.body.message;
 
-  
   console.log('Received data:', name, message);
   res.send(`Thanks ${name}, your message "${message}" was received!`);
 });
