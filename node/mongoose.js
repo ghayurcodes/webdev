@@ -8,9 +8,6 @@ try {
 }
 
 
-
-
-
 // Define a schema
 const userSchema = new mongoose.Schema({
   name: String,
