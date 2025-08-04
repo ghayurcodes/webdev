@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drag & Drop Image Upload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      background: #f0f0f0;
+    }
+
+    .upload-area {
+      border: 2px dashed #999;
+      border-radius: 10px;
+      padding: 30px;
+      background: white;
+      text-align: center;
+      width: 350px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .upload-area:hover {
+      background: #f9f9f9;
+    }
+
+    .upload-area.dragover {
+      background: #e0e0ff;
+      border-color: #5555ff;
+    }
+
+    .upload-area p {
+      margin: 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    #file {
+      display: none;
+    }
+
+    .preview {
+      margin-top: 20px;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .preview img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="upload-area" id="upload-area">
+    <p>Click or Drag & Drop to Upload Image</p>
+    <input type="file" id="file" name="img" accept="image/*">
+  </div>
+
+  <div class="preview" id="preview"></div>
+
+  <script>
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('file');
+    const preview = document.getElementById('preview');
+
+    // Open file dialog on click
+    uploadArea.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    // Highlight on drag
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('dragover');
+    });
+
+    // Remove highlight
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('dragover');
+    });
+
+    // Handle drop
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        fileInput.files = e.dataTransfer.files; // update input
+        previewImage(file);
+      }
+    });
+
+    // Handle file selection
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        previewImage(fileInput.files[0]);
+      }
+    });
+
+    // Show image preview
+    function previewImage(file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        preview.innerHTML = `<img src="${e.target.result}" alt="Preview" />`;
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+
+</body>
+</html>
