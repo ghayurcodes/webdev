@@ -6,20 +6,21 @@
 </head>
 <body>
   <h1>Send a Message to server</h1>
-  <form id="messageForm">
+ 
     <label>Name: <input type="text" id="name" required></label><br><br>
     <label>Message: <input type="text" id="message" required></label><br><br>
-    <button type="submit">Send</button>
-  </form>
+    <button type="submit" id="submit">Send</button>
+  
 
   <p id="response"></p>
 
   <script>
-    const form = document.getElementById('messageForm');
+    
     const responseText = document.getElementById('response');
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    document.getElementById("submit").addEventListener('click', async (e) => {
+      console.log("prerssewd")
+      
 
      
       const data = {
