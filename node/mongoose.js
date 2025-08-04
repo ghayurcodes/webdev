@@ -18,8 +18,8 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("users", userSchema);
 
 const user=new User({
-    "name":"ahmed",
-    "age":97
+    "name":"gul khan",
+    "age":33
 })
 
 user.save()
