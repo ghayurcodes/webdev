@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated React App</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+      body {
+        background-color: #0f172a;
+        color: white;
+        transition: background 0.5s ease;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen px-4">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState } = React;
+
+      function App() {
+        const [count, setCount] = useState(0);
+
+        return (
+          <div className="text-center fade-in">
+            <h1 className="text-5xl font-bold mb-4">
+              🚀 Welcome to Animated React Site
+            </h1>
+            <p className="text-lg text-gray-300 mb-6 max-w-xl mx-auto">
+              This is a fully animated, single-file React app using Tailwind CSS.
+            </p>
+
+            <button
+              onClick={() => setCount(count + 1)}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white text-lg transition transform hover:scale-110 active:scale-95"
+            >
+              You clicked {count} times
+            </button>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
