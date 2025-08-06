@@ -1,0 +1,18 @@
+.nav{
+  
+    background-color: goldenrod;
+    margin-top: 0;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 0;
+}
+
+.nav ul li{margin: 10px 0;
+    font-size: 25px;
+    color: aliceblue;
+    font-family: cursive;
+}
