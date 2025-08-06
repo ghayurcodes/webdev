@@ -7,11 +7,15 @@
 .App {
   text-align: center;
   font-size: 30px;
-  
+ 
 }
 
 body{
-  background-color: rgb(236, 232, 232);
+  background-image: url("https://cdn.wallpapersafari.com/6/34/Old7UD.jpg");
+  background-size: cover;
+  
+ 
+  
 }
 
 .btn{
