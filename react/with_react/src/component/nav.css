@@ -1,18 +1,29 @@
 .nav{
-  
+    margin: 10px;
     background-color: goldenrod;
-    margin-top: 0;
+    border-radius: 10px;
+    border-bottom: 4px solid rgb(19, 12, 27);
+
 }
 
 .nav ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
-    margin-top: 0;
+   
 }
 
-.nav ul li{margin: 10px 0;
-    font-size: 25px;
+.nav ul li{
+    margin: 10px 0;
+    font-size: 1.5rem;
     color: aliceblue;
     font-family: cursive;
+    cursor: pointer;
+}
+.nav ul li:hover{
+   transition: 0.3s all ease;
+   transform: scale(1.1);
+   color: rgb(81, 157, 223);
+   font-weight: 900;
+
 }

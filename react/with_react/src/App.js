@@ -10,7 +10,7 @@ function App(props) {
       <Navbar /> {/* Capitalized usage */}
       <p>hello kalia {props.name}</p>
       <p>{value}</p>
-      <button onClick={() => setValue(value + 1)}>tap me</button>
+      <button className='btn' onClick={() => setValue(value + 1)}>Tap me</button>
     </div>
   );
 }
