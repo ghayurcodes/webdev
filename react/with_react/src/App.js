@@ -9,7 +9,8 @@ function App(props) {
   let names=[{"name":"ali",
     "age":12},{"name":"ghayur",
     "age":42},{"name":"gul khan",
-    "age":99}
+    "age":99},{"name":"laiba",
+    "age":29}
   ]
   
 
@@ -29,7 +30,7 @@ function App(props) {
    if(value===10){
     setshowbtn(true)              //conditional rendering
    }
-  }, )
+  },)
 
  
   return (

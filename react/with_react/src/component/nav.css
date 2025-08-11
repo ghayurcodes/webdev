@@ -27,3 +27,11 @@
    font-weight: 900;
 
 }
+.nav ul li:nth-child(even){
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: rgb(20, 120, 208);
+    font-family: cursive;
+    cursor: pointer;
+    
+}
