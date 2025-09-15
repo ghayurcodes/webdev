@@ -1,4 +1,4 @@
-console.log("hello Ghayur");  // Logs greeting
+
 
 // let a = document.querySelectorAll(".box");
 // console.log(a);      
@@ -92,3 +92,7 @@ console.log("hello Ghayur");  // Logs greeting
 // })()
 
 
+
+let a = "ahmed";
+let b = [...a, "hello"];   // spreads "ahmed" into ["a","h","m","e","d"]
+console.log(b);            // ["a", "h", "m", "e", "d", "hello"]
