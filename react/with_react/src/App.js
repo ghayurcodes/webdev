@@ -1,4 +1,5 @@
 import './App.css';
+import FuzzyText from './component/FT';
 import React, { useState ,useEffect, useRef} from 'react';
 import Navbar from './component/nav'; // Make sure the filename is nav.js and the folder path is correct
 
@@ -45,6 +46,15 @@ function App(props) {
       ))}
       <button className='btn' onClick={() => setValue(value + 1)}>Tap me</button>
       <p>hello</p>
+
+
+      <FuzzyText 
+  baseIntensity={0.2} 
+  hoverIntensity={0.5} 
+  enableHover={true}
+>
+  404
+</FuzzyText>
       
     </div>
   );
