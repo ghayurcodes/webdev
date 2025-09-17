@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './component/nav'; // Make sure the filename is nav.js and the folder path is correct
 
 function App(props) {
+
+  let [val, setval] = useState("")
   const [value, setValue] = useState(0);      //usestate(hooks)
   let a = useRef(0)
   let [showbtn, setshowbtn] = useState(false);
@@ -55,15 +57,21 @@ function App(props) {
       <button className='btn' onClick={() => setValue(value + 1)}>Tap me</button>
       <p>hello</p>
 
+      <input
+        type="text"
+        value={val}
+        onChange={(e) => setval(e.target.value)}
+      />
 
-      <FuzzyText
-        baseIntensity={0.2}
-        hoverIntensity={0.5}
-        enableHover={true}
-      >
-        Hello Hacker!
-      </FuzzyText>
-      wdkfwefw
+      <p>{val}</p>
+
+
+
+
+
+
+
+
 
     </div>
   );
