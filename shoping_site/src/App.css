@@ -1,24 +1,55 @@
-/* Reset & Body */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f9d5d3, #fcd6a6);
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  align-items: center;
+ min-height: 100vh;
+
 }
 
-/* Top container */
+
+
 .top {
   background-color: #fff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  width: 60vw;
-  max-width: 600px;
+  width: 35vw;
+
 }
 
-/* Input section */
+.top.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Header */
+header {
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #6200ee;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.theme-btn:hover {
+  background-color: #4500b5;
+}
+
+/* Input area */
 .addtask {
   display: flex;
   margin-bottom: 20px;
@@ -33,12 +64,18 @@ body {
   transition: border 0.3s;
 }
 
+.top.dark .addtask input {
+  background-color: black;
+  color: white;
+}
+
 .addtask input:focus {
   border-color: #6200ee;
   outline: none;
 }
 
 .addtask button {
+
   padding: 10px 20px;
   margin-left: 10px;
   background-color: #6200ee;
@@ -64,41 +101,24 @@ body {
 /* Individual task */
 .task {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background-color: #ffebc2;
   padding: 15px 20px;
   border-radius: 10px;
   font-size: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-
-
-   /* Add these lines */
-  word-wrap: break-word;   /* break long words */
-  overflow-wrap: break-word; /* safer fallback */
-  word-break: break-word;  /* handle very long unbroken strings */
+  word-break: break-word;
   white-space: normal;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.top.dark .task {
+  background-color: #333;
+  color: white;
 }
 
 .task:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Optional: Buttons inside tasks if you add them later */
-.task button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background-color: #6200ee;
-  color: white;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-
-.task button:hover {
-  background-color: #4500b5;
 }
