@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  let [num,setnu]=useState(0)
+
+  function inc(){
+    setnu(num+1)
+    if(num==10){
+      setnu("loz")
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <h1>{num}</h1>
+    <button onClick={inc}>increment</button>
+    </>
+   
   );
 }
 
