@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+/* Reset & Body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9d5d3, #fcd6a6);
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Top container */
+.top {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 60vw;
+  max-width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input section */
+.addtask {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.addtask input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.addtask input:focus {
+  border-color: #6200ee;
+  outline: none;
+}
+
+.addtask button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.addtask button:hover {
+  background-color: #4500b5;
+}
+
+/* Tasks container */
+.showtasks {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual task */
+.task {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #ffebc2;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+
+   /* Add these lines */
+  word-wrap: break-word;   /* break long words */
+  overflow-wrap: break-word; /* safer fallback */
+  word-break: break-word;  /* handle very long unbroken strings */
+  white-space: normal;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Optional: Buttons inside tasks if you add them later */
+.task button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #6200ee;
   color: white;
+  font-size: 14px;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task button:hover {
+  background-color: #4500b5;
 }

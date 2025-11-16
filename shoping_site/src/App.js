@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './App.css'
+const Task = ({ desc }) => {
+  return (
+    <div className='task'>
+      {desc}
+    </div>
+  )
+}
 
-function App() {
-  let [num,setnu]=useState(0)
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState("");
 
-  function inc(){
-    setnu(num+1)
-    if(num==10){
-      setnu("loz")
+  const handleAdd = () => {
+    if(input.trim() !== "") {
+      setTasks([...tasks, input]);
+      setInput(""); // clear input
     }
   }
+
   return (
-    <>
-     <h1>{num}</h1>
-    <button onClick={inc}>increment</button>
-    </>
-   
-  );
+    <div className='top'>
+      <div className='addtask'>
+        <input 
+          type='text' 
+          value={input} 
+          onChange={e => setInput(e.target.value)}
+          placeholder="Enter task"
+        />
+        <button onClick={handleAdd}>Add</button>
+      </div>
+
+      <div className='showtasks'>
+        <h1>TASKS!</h1>
+        {tasks.map((task, index) => (
+          <Task key={index} desc={task} />
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default App;
