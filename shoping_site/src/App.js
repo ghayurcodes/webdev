@@ -5,7 +5,7 @@ const Task = ({ desc,ondel }) => {
   return (
     <div className='task'>
       <span>{desc}</span>
-      <span><button onClick={
+      <span><button className='delb' onClick={
         ondel
       }>Delete</button></span>
     </div>

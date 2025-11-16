@@ -87,6 +87,20 @@ header {
   transition: background 0.3s;
 }
 
+
+
+.delb{
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #ee2400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
 .addtask button:hover {
   background-color: #4500b5;
 }
