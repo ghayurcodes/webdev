@@ -1,68 +1,29 @@
-// src/pages/Home/Home.jsx
-import React from "react";
-import { Box, TextField, Typography } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import modules from swiper/modules
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-// Import Swiper CSS
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-
+import React, { useContext } from 'react';
 import "./Home.css";
+import { ProductsContext } from "../../context/ProductContext";
 
-const images = [
-  "https://picsum.photos/1200/500?random=1",
-  "https://picsum.photos/1200/500?random=2",
-  "https://picsum.photos/1200/500?random=3",
-];
+const Home = () => {
+  const { products, addToCart } = useContext(ProductsContext);
 
-export default function Home() {
-    let d=""
   return (
-    <Box className="home-container">
-      
-      <Box className="carousel-wrapper">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
-          effect="fade"
-          loop={true}
-        >
-          {images.map((url, index) => (
-            <SwiperSlide key={index}>
-              <Box
-                className="slide"
-                sx={{
-                  backgroundImage: `url(${url})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Box>
-
-      <div>
-       <TextField
-  variant="outlined"
-  label="Enter"
-  sx={{
-    width: "100%",
-    "& .MuiInputBase-input": {
-      height: "100px",
-      color: "red",
-      padding: "0 14px",
-      backgroundColor:"yellow"
-    },
-  }}
-/>
-
+    <div className="homecont">
+      <h1>Products</h1>
+      <div className="products">
+        {!products || products.length === 0 ? (
+          <p className="loading">Loading...</p>
+        ) : (
+          products.map(p => (
+            <div key={p.id} className="product-card">
+              <img src={p.image} alt={p.title} className="product-image" />
+              <h3 className="product-title">{p.title}</h3>
+              <p className="product-price">${p.price}</p>
+              <button className='btn' onClick={() => addToCart(p)}>Add to Cart</button>
+            </div>
+          ))
+        )}
       </div>
-    </Box>
+    </div>
   );
-}
+};
+
+export default Home;
