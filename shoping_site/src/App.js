@@ -8,10 +8,13 @@ import ProductContextProvider, { ProductsContext } from "./context/ProductContex
 import "./App.css"
 import About from "./pages/About/About";
 import C from "./pages/Contact/C";
+import SplashCursor from "./SplashCursor";
 
 function App() {
   return (
+    
     <Router>
+      <SplashCursor/>
       <Navbar/>
         <ProductContextProvider>
           <Routes>

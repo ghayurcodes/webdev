@@ -2,12 +2,27 @@ import React, { useContext } from 'react';
 import "./Home.css";
 import { ProductsContext } from "../../context/ProductContext";
 
+
+
+
+
+
+
+
+
+
 const Home = () => {
   const { products, addToCart } = useContext(ProductsContext);
 
   return (
     <div className="homecont">
-      <h1>Products</h1>
+      <div className='hh'>
+        Products!
+        
+
+      </div>
+
+      
       <div className="products">
         {!products || products.length === 0 ? (
           <p className="loading">Loading...</p>
