@@ -12,20 +12,20 @@ import SplashCursor from "./SplashCursor";
 
 function App() {
   return (
-    
+
     <Router>
       <SplashCursor />
-      <Navbar/>
-        <ProductContextProvider>
-          <Routes>
+      <Navbar />
+      <ProductContextProvider>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<C/>} />
-        
-      </Routes>
-        </ProductContextProvider>
-      
+          <Route path="/contact" element={<C />} />
+
+        </Routes>
+      </ProductContextProvider>
+
     </Router>
   );
 }
