@@ -14,7 +14,7 @@ function App() {
   return (
     
     <Router>
-      <SplashCursor/>
+      <SplashCursor />
       <Navbar/>
         <ProductContextProvider>
           <Routes>

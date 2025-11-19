@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ProfileCard from "./components/ProfileCard";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+      <div className="top-bar">
+        <div className="brand">Catbook</div>
+        <div className="top-fill" />
+      </div>
+
+      <main className="main-container">
+        <ProfileCard
+          name="YOUR NAME HERE"
+          about="Extra Challenge: Modify catbook to show a personalized description here!"
+          happiness={70}
+          favorite="frog"
+          imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDQV50qS4Ejic6DN5I1y0OJKjhmTHX89d4A&s"
+        />
+      </main>
     </div>
   );
 }
